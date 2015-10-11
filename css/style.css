@@ -8,6 +8,10 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 
+table{
+	background-color: #B1252C;
+}
+
 h1.page-header{
     font-size: 56px;
     font-weight: 900;

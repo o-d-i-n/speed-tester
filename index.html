@@ -15,14 +15,15 @@
 </head>
 
 <body class="text-center">
-
-    <h1 class="page-header">Basic Speed Tester</h1>
-	<h3>An accurate and basic speed tester</h3>
-	
-	<button class="btn btn-warning btn-lg" onclick="btnStartClick()">Begin Test</button>
-
-	<div id="msg" class="col-md-8 col-md-offset-2 text-center"></div>
-	
+	<div class="container">
+		<h1 class="page-header">Basic Speed Tester</h1>
+		An accurate and basic speed tester<br>Without having to host a SpeedOfMe speed test on your server, you are now able to run a SpeedOf.Me speed test right from your website. It is a JavaScript speed test API
+		<br>
+		<button class="btn btn-warning" onclick="btnStartClick()">Begin Test</button>
+		<div class="clear-fix"></div>
+		<br>
+		<div id="msg" class="col-md-8 col-md-offset-2 text-center"></div>
+	</div>
 	<footer>
 		Made by <a href="http://www.prabhakargupta.com" target="_blank">Prabhakar Gupta</a> using <a href="http://speedof.me/api.html">Speedof.me API</a>
 	</footer>
@@ -37,7 +38,7 @@
 	var msgDiv = document.getElementById("msg");
 	
 	function btnStartClick() {
-		msgDiv.innerHTML = "<br><div class='spinner'>Loading...</div>";
+		msgDiv.innerHTML = "<br><div>Fetching results...</div>";
 		SomApi.startTest();
 	}
 
