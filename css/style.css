@@ -39,3 +39,10 @@ footer{
     text-align: center;
     color: #FFFFFF;
 }
+
+.github-fork{
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 200px;
+}
