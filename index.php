@@ -9,49 +9,27 @@
     <title>Speed Tester</title>
 	
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,900' rel='stylesheet' type='text/css'>
-    <link href="http://css-spinners.com/css/spinner/spinner.css" rel="stylesheet">
-
-	
-	<style type="text/css">
-    h1{
-        padding: 20px;
-		font-size: 72px;
-		font-weight: bold;
-        color: #FAFAFA;
-    }
-    .result-text{
-        font-weight: bold;
-        margin: 10px;
-    }
-    body{
-		background-image: url(img/bg.jpg);
-		background-size: cover;
-		color: #FFF;
-        font-size: 20px;
-        font-family: 'Roboto', sans-serif;
-    }
-	button{
-		margin: 10px;
-	}
-    </style>
+    <link href="css/style.css" rel="stylesheet">
+    
 	<script src="http://speedof.me/api/api.js" type="text/javascript"></script>
 </head>
 
 <body class="text-center">
 
-    <h1>SPEED TEST</h1>
-	
+    <h1 class="page-header">Basic Speed Tester</h1>
 	<h3>An accurate and basic speed tester</h3>
-	<h5>Made using <a href="http://speedof.me" style="color:#FAFAFA">Speedof.me</a> API</h5>
 	
 	<button class="btn btn-warning btn-lg" onclick="btnStartClick()">Begin Test</button>
-	<br><br>
+
 	<div id="msg" class="col-md-8 col-md-offset-2 text-center"></div>
+	
+	<footer>
+		Made by <a href="http://www.prabhakargupta.com" target="_blank">Prabhakar Gupta</a> using <a href="http://speedof.me/api.html">Speedof.me API</a>
+	</footer>
 	
 <script type="text/javascript">
 	SomApi.account = "SOM5492258025569";
-	SomApi.domainName = "www.csinsit.org";
+	SomApi.domainName = "www.prabhakargupta.com";
 	SomApi.config.sustainTime = 4; 
 	SomApi.onTestCompleted = onTestCompleted;
 	SomApi.onError = onError;
@@ -79,5 +57,6 @@
 		msgDiv.innerHTML = "Error "+ error.code + ": "+error.message;
 	}
 </script>
+
 </body>
 </html>
