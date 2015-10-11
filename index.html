@@ -9,18 +9,18 @@
     <title>Speed Tester</title>
 	
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    
-	<script src="http://speedof.me/api/api.js" type="text/javascript"></script>
+    <link href="css/style.css" rel="stylesheet">    
 </head>
 
 <body class="text-center">
 	<div class="container">
 		<h1 class="page-header">Basic Speed Tester</h1>
-		An accurate and basic speed tester<br>Without having to host a SpeedOfMe speed test on your server, you are now able to run a SpeedOf.Me speed test right from your website. It is a JavaScript speed test API
-		<br>
-		<button class="btn btn-warning" onclick="btnStartClick()">Begin Test</button>
-		<div class="clear-fix"></div>
+		<div id="to-hide-data">
+			An accurate and basic speed tester<br>Without having to host a SpeedOfMe speed test on your server, you are now able to run a SpeedOf.Me speed test right from your website. It is a JavaScript speed test API
+			<br>
+			<button class="btn btn-warning" onclick="btnStartClick()">Begin Test</button>
+			<div class="clear-fix"></div>
+		</div>
 		<br>
 		<div id="msg" class="col-md-8 col-md-offset-2 text-center"></div>
 	</div>
@@ -28,36 +28,9 @@
 		Made by <a href="http://www.prabhakargupta.com" target="_blank">Prabhakar Gupta</a> using <a href="http://speedof.me/api.html">Speedof.me API</a>
 	</footer>
 	
-<script type="text/javascript">
-	SomApi.account = "SOM5492258025569";
-	SomApi.domainName = "www.prabhakargupta.com";
-	SomApi.config.sustainTime = 4; 
-	SomApi.onTestCompleted = onTestCompleted;
-	SomApi.onError = onError;
-
-	var msgDiv = document.getElementById("msg");
-	
-	function btnStartClick() {
-		msgDiv.innerHTML = "<br><div>Fetching results...</div>";
-		SomApi.startTest();
-	}
-
-	function onTestCompleted(testResult) {
-		msgDiv.innerHTML = 
-		"<table class='table table-bordered my'><tbody><tr>" +	
-		"<tr><td>Download Speed</td><td>"+testResult.download+" Mbps</td></tr>" +
-		"<tr><td>Upload Speed</td><td>"+testResult.upload+" Mbps</td></tr>" +
-		"<tr><td>Latency</td><td>"+testResult.latency+" ms</td></tr>" +
-		"<tr><td>Test Server</td><td>"+testResult.testServer+"</td></tr>" +
-		"<tr><td>Your IP</td><td>"+testResult.ip_address+"</td></tr>" +
-		"<tr><td>Hostname</td><td>"+testResult.hostname+"</td></tr>" +
-		"</tbody></table>";
-	}
-
-	function onError(error) {
-		msgDiv.innerHTML = "Error "+ error.code + ": "+error.message;
-	}
-</script>
+<script src="http://speedof.me/api/api.js" type="text/javascript"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
 
 </body>
 </html>
